@@ -80,10 +80,10 @@ namespace TutorialEntityFrameWorkCore.BLL
         public static List<Mascotas> GetList(Expression<Func<Mascotas,bool>>expression)
         {
             EjemploEntityContext contexto = new EjemploEntityContext();
-            List<Mascotas> list;
+            List<Mascotas> lista;
             try
             {
-                list = contexto.Mascotas.Where(expression).ToList();
+                lista = contexto.Mascotas.Where(expression).ToList();
 
             }
             catch (Exception)
@@ -91,7 +91,7 @@ namespace TutorialEntityFrameWorkCore.BLL
 
                 throw;
             }
-            return list;
+            return lista;
         }
     }
 }
